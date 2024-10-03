@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss"
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-  darkMode: ["class", "class"],
+  darkMode: ["class"],
   content: [
     './pages/**/*.{ts,tsx}',
     './components/**/*.{ts,tsx}',
@@ -11,7 +11,7 @@ const config = {
   ],
   theme: {
   	container: {
-  		center: 'true',
+  		center: true,
   		padding: '2rem',
   		screens: {
   			'2xl': '1400px'
@@ -60,20 +60,12 @@ const config = {
   		},
   		keyframes: {
   			'accordion-down': {
-  				from: {
-  					height: '0'
-  				},
-  				to: {
-  					height: 'var(--radix-accordion-content-height)'
-  				}
+  				from: { height: '0' },
+  				to: { height: 'var(--radix-accordion-content-height)' }
   			},
   			'accordion-up': {
-  				from: {
-  					height: 'var(--radix-accordion-content-height)'
-  				},
-  				to: {
-  					height: '0'
-  				}
+  				from: { height: 'var(--radix-accordion-content-height)' },
+  				to: { height: '0' }
   			},
   			spotlight: {
   				'0%': {
@@ -84,30 +76,12 @@ const config = {
   					opacity: '1',
   					transform: 'translate(-50%,-40%) scale(1)'
   				}
-  			},
-  			'accordion-down': {
-  				from: {
-  					height: '0'
-  				},
-  				to: {
-  					height: 'var(--radix-accordion-content-height)'
-  				}
-  			},
-  			'accordion-up': {
-  				from: {
-  					height: 'var(--radix-accordion-content-height)'
-  				},
-  				to: {
-  					height: '0'
-  				}
   			}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
-  			spotlight: 'spotlight 2s ease .75s 1 forwards',
-  			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			spotlight: 'spotlight 2s ease .75s 1 forwards'
   		}
   	}
   },
